@@ -1,0 +1,15 @@
+{
+  "welcomeBack": "Chào mừng trở lại !",
+  "userName" : "Username",
+  "password" : "Password",
+  "plHolder_username": "Nhập tài khoản",
+  "plHolder_password": "Nhập mật khẩu",
+  "login": "Đăng nhập",
+  "messagePleaseEnterUsername": "Vui lòng nhập tài khoản",
+  "messagePleaseEnterPassword": "Vui lòng nhập mật khẩu",
+  "clickHere": "Nhấp vào đây",
+  "forgotPassword_questionMarkDot": "Quên mật khẩu ?",
+  "vietnamese": "Tiếng Việt",
+  "english": "Tiếng Anh"
+
+}
