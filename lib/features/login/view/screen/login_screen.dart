@@ -1,9 +1,10 @@
-import 'package:aquarium_watcher_app/common/widgets/common_bottom_modal_change_language.dart';
-import 'package:aquarium_watcher_app/common/widgets/common_button_language.dart';
 import 'package:aquarium_watcher_app/common/widgets/common_hidden_text_form_field.dart';
 import 'package:aquarium_watcher_app/common/widgets/common_text_button.dart';
 import 'package:aquarium_watcher_app/common/widgets/common_text_form_field.dart';
+import 'package:aquarium_watcher_app/core/languages/language_event.dart';
 import 'package:aquarium_watcher_app/features/login/view/widgets/submit_button.dart';
+import 'package:aquarium_watcher_app/features/select_language/controllers/language_controller.dart';
+import 'package:aquarium_watcher_app/features/select_language/view/widgets/select_language_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -16,11 +17,19 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final String _imageURL = "assets/images/robot_face_amico.png";
-
+  final _languageController = LanguageController();
   final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
+    _languageController.setOnChangeState = (state) {
+      if (state.localization == "vi"){
+        _languageController.changeLanguage(VIChangeLanguageEvent());
+      } else if (state.localization == "en"){
+        _languageController.changeLanguage(ENChangeLanguageEvent());
+      }
+    };
+
     final appLocalizations = AppLocalizations.of(context)!;
 
     return SafeArea(
@@ -35,8 +44,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        CommonButtonLanguage(
-                          onPressed: () => _onPressedLanguage(context),
+                        SelectLanguageButton(
+                          onPressed: () {
+                          },
+                          languageController: _languageController,
                         )
                       ],
                     ),
@@ -111,13 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   }
 
-  void _onPressedLanguage(BuildContext context){
-    showModalBottomSheet<void>(
-        context: context,
-        builder: (BuildContext context) {
-            return CommonBottomModalChangeLanguage();
-        });
-  }
+
 
 
 }
