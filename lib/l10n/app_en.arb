@@ -2,6 +2,13 @@
   "welcomeBack": "Welcome back !",
   "userName" : "Username",
   "password" : "Password",
-  "plHolder_username": "Please Username",
-  "plHolder_password": "Please password"
+  "plHolder_username": "Username",
+  "plHolder_password": "password",
+  "login": "Login",
+  "messagePleaseEnterUsername": "Please enter Username",
+  "messagePleaseEnterPassword": "Please enter Password",
+  "clickHere": "Click here",
+  "forgotPassword_questionMarkDot": "Forgot password ?",
+  "vietnamese": "Vietnamese",
+  "english": "English"
 }
