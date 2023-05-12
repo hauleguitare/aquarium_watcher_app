@@ -9,12 +9,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class SelectLanguageButton extends StatefulWidget {
   final VoidCallback? onPressed;
-  final LanguageController languageController;
 
   const SelectLanguageButton({
     Key? key,
     this.onPressed,
-    required this.languageController
   }) : super(key: key);
 
   @override
@@ -28,7 +26,7 @@ class _SelectLanguageButtonState extends State<SelectLanguageButton> {
     return BlocBuilder<LanguageBloc, LanguageState>(
         builder: (BuildContext context, LanguageState state){
           return TextButton(
-            onPressed: () => _onPressedLanguage(context, widget.languageController),
+            onPressed: widget.onPressed,
             child: _renderIconLanguageByState(state),
           );
         }
@@ -52,9 +50,5 @@ class _SelectLanguageButtonState extends State<SelectLanguageButton> {
 
     }
     return renderIcon;
-  }
-
-  void _onPressedLanguage(BuildContext context, LanguageController controller) {
-      controller.showModal(context);
   }
 }
