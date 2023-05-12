@@ -46,8 +46,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         SelectLanguageButton(
                           onPressed: () {
+                            _languageController.showLanguageModalBottomSheet(context);
                           },
-                          languageController: _languageController,
                         )
                       ],
                     ),
