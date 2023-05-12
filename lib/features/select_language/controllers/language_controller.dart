@@ -18,7 +18,7 @@ class LanguageController extends ChangeNotifier {
     onChangeState = callBackFn;
   }
 
-  void showModal(BuildContext context){
+  void showLanguageModalBottomSheet(BuildContext context){
     showModalBottomSheet<void>(
         context: context,
         builder: (BuildContext context) {
