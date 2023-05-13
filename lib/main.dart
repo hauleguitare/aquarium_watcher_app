@@ -13,7 +13,6 @@ void main() async{
 
 
   var locator = InjectorProvider.getInstance();
-  var sharedPreferService = await locator.getAsync<SharedPreferencesService>();
 }
 
 
