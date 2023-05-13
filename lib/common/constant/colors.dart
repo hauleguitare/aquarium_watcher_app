@@ -24,6 +24,7 @@ const Color isabelline = Color(0xFFF0F0F0);
 const Color mediumTurquoise = Color(0xFF53D0EC);
 const Color blue100 = Color.fromRGBO(219, 234, 254, 1);
 const Color bdazzledBlue = Color(0xFF3B5998);
+const Color bdazzledLightBlue = Color(0xFF6178A8);
 const Color malachite = Color(0xFF00D65B);
 const Color greenDeep = Color.fromRGBO(33, 202, 117, 1);
 const Color blueDocument = Color.fromRGBO(32, 140, 233, 1);

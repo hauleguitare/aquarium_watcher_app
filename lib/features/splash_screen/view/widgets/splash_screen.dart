@@ -31,13 +31,13 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 Image.asset(
                   _splashImageUrl,
-                  width: 250,
-                  height: 250,
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  height: MediaQuery.of(context).size.width * 0.4,
                 ),
                 Text(
                     _applocalizations.appName,
                     textAlign: TextAlign.center,
-                    style: h0(context: context, fontWeight: '700', color: bdazzledBlue)
+                    style: h1(context: context, fontWeight: '700', color: bdazzledBlue)
                 ),
               ],
             ),
